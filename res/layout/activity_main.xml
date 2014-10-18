@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout11"
+        style="@style/commen_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tan"
+        android:orientation="horizontal" >
+
+        
+
+        <TextView
+            android:id="@+id/tv_main_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="2014学年第一学期"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/title_size" />
+
+        <ImageButton
+            android:id="@+id/ib_choose_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/azure"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <!-- 顶部分割线 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line_h2_light" />
+    
+    
+    <!-- 正文从这里开始 -->
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/lv_cursors"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>
+        
+        
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tan"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="5dp" >
+            
+            <LinearLayout
+		       android:layout_width="fill_parent"
+		       android:layout_height="1px"
+		       android:background="@drawable/line_h2_light" />
+
+            <ImageButton
+                android:id="@+id/ib_addcursor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:src="@drawable/plus_50" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

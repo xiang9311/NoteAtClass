@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckNoteActivity" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout11"
+        style="@style/commen_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tan"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true" >
+
+            <ImageButton
+                android:id="@+id/ib_notes_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/tan"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/tv_chaptername_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ib_notes_back"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ib_notes_back"
+                android:layout_toLeftOf="@+id/ib_editnote"
+                android:text="第一章"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size" />
+
+            <ImageButton
+                android:id="@+id/ib_addnote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:src="@drawable/plus_50" />
+
+            <ImageButton
+                android:id="@+id/ib_editnote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/ib_addnote"
+                android:background="@color/white"
+                android:src="@drawable/edit" />
+            
+            <Button
+                android:id="@+id/b_savenote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/tan"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:text="保存" />
+            <Button
+                android:id="@+id/b_savenewnote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/tan"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:text="保存" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_switch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/RelativeLayout11"
+        android:background="@color/oldpaper"
+        android:orientation="vertical" >
+
+        <TextSwitcher
+            android:id="@+id/ts_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/padding8" >
+        </TextSwitcher>
+        
+        <EditText 
+            android:id="@+id/et_editnotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:textSize="20sp"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/oldpaper"
+            android:visibility="gone" />
+        
+        <TextView
+            android:id="@+id/tv_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/ll_button"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/gray"
+            android:text="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <Button 
+                android:id="@+id/b_shang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textSize="25sp"
+                android:background="@color/tan"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:text="上一个" />
+            <Button 
+                android:id="@+id/b_xia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textSize="25sp"
+                android:background="@color/tan"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:text="下一个" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

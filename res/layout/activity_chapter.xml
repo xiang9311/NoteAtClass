@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ChapterActivity" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout11"
+        style="@style/commen_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tan"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true" >
+
+            <ImageButton
+                android:id="@+id/ib_chapters_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/tan"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/tv_cursorname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ib_chapters_back"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ib_chapters_back"
+                android:text="游戏架构与设计"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size" />
+            
+            <ImageButton 
+                android:id="@+id/ib_addchapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:src="@drawable/plus_50"/>
+            
+            <ImageButton 
+                android:id="@+id/ib_editchapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ib_addchapter"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:src="@drawable/edit"/>
+            
+            <Button
+                android:id="@+id/b_savenoteinlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/tan"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:text="保存" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 顶部分割线 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line_h2_light" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_allnotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="全部笔记"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+            
+            <ImageView 
+                android:id="@+id/iv_down_notes"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/down"/>
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_h2" />
+
+        <ListView
+            android:id="@+id/lv_allnotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3" >
+        </ListView>
+        
+        <EditText 
+            android:id="@+id/et_empty"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="15sp"
+	        android:textColor="@color/black"
+	        android:padding="5dp"
+	        android:layout_marginTop="3dp"
+	        android:layout_marginBottom="3dp"
+	        android:background="@drawable/bigtext_bg"
+	        android:visibility="gone"
+	        android:hint="点击添加笔记"/>
+
+        <!-- 章节列表 -->
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_allchapters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="章节"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+            
+            <ImageView 
+                android:id="@+id/iv_down_chapters"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/down"/>
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line_h2" />
+
+        <ListView
+            android:id="@+id/lv_chapters"
+            android:layout_width="match_parent"
+            android:layout_height="170dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
